@@ -4,12 +4,10 @@ import 'package:intl/intl.dart' hide TextDirection;
 
 import '../data/price_snapshot.dart';
 import '../logic/prices_cubit.dart';
+import 'format.dart';
 
-final _money = NumberFormat('#,##0.00', 'en_US');
 final _clock = DateFormat('HH:mm:ss', 'en_US');
 final _clockShort = DateFormat('HH:mm', 'en_US');
-
-String _egp(double? v) => v == null ? '—' : _money.format(v);
 
 class PricesScreen extends StatelessWidget {
   const PricesScreen({super.key});
@@ -286,7 +284,7 @@ class _QuoteRow extends StatelessWidget {
           Expanded(
             flex: 3,
             child: Text(
-              _egp(quote?.buy),
+              egp(quote?.buy),
               style: number,
               textAlign: TextAlign.left,
               textDirection: TextDirection.ltr,
@@ -295,7 +293,7 @@ class _QuoteRow extends StatelessWidget {
           Expanded(
             flex: 3,
             child: Text(
-              _egp(quote?.sell),
+              egp(quote?.sell),
               style: number,
               textAlign: TextAlign.left,
               textDirection: TextDirection.ltr,
@@ -341,7 +339,7 @@ class _AnimatedNumberState extends State<_AnimatedNumber> {
     return AnimatedDefaultTextStyle(
       duration: const Duration(milliseconds: 300),
       style: base.copyWith(color: _flash ?? base.color),
-      child: Text(_egp(widget.value), textDirection: TextDirection.ltr),
+      child: Text(egp(widget.value), textDirection: TextDirection.ltr),
     );
   }
 }

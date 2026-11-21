@@ -5,6 +5,7 @@ import 'package:hive/hive.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 import '../config.dart';
+import 'history_point.dart';
 import 'price_snapshot.dart';
 
 /// Keeps the last snapshot on the device so the app can open without internet.
@@ -65,6 +66,19 @@ class PriceRepository {
   Future<PriceSnapshot> fetch() async {
     final res = await _dio.get<Map<String, dynamic>>('/prices');
     return _accept(res.data!);
+  }
+
+  /// Daily prices for the last 30 days. [asset] is the backend's asset name,
+  /// for example `gold21`.
+  Future<List<HistoryPoint>> history(String asset) async {
+    final res = await _dio.get<Map<String, dynamic>>(
+      '/history',
+      queryParameters: {'asset': asset},
+    );
+    return [
+      for (final point in (res.data?['points'] as List? ?? const []))
+        ?HistoryPoint.fromJson(point),
+    ];
   }
 
   /// Live prices. The backend pushes a snapshot on connect and again every

@@ -4,8 +4,8 @@
 
 An open-source Flutter app that tracks live gold, silver and USD prices and shows what your holdings are worth in Egyptian pounds.
 
-> **الحالة:** الـ backend وشاشة الأسعار اللحظية شغالين. المحفظة والمساعد الذكي في التطبيق لسه.
-> **Status:** backend and the live prices screen work. Portfolio and the in-app assistant are next.
+> **الحالة:** الـ backend، الأسعار اللحظية، المحفظة، الرسم البياني، والحاسبة شغالين. شاشة المساعد الذكي والتنبيهات لسه.
+> **Status:** backend, live prices, portfolio, chart and calculator work. The in-app assistant and price alerts are next.
 
 ## التشغيل
 
@@ -26,16 +26,16 @@ An open-source Flutter app that tracks live gold, silver and USD prices and show
 **الأساسية**
 
 - [x] شاشة الأسعار: دهب 24 / 21 / 18، فضة، دولار، بتتحدث لوحدها
-- [ ] محفظتي: إجمالي القيمة والمكسب أو الخسارة
-- [ ] إضافة وتعديل ومسح عمليات الشراء
+- [x] محفظتي: إجمالي القيمة والمكسب أو الخسارة
+- [x] إضافة وتعديل ومسح عمليات الشراء
 - [x] العمل بدون إنترنت بآخر أسعار متخزنة
 - [ ] مساعد ذكي: ملخص للسوق وشات يشرح الأرقام
 
 **الإضافية**
 
-- [ ] رسم بياني لحركة السعر
+- [x] رسم بياني لحركة السعر
 - [ ] تنبيه لما السعر يوصل رقم معين
-- [ ] حاسبة سريعة (جرامات ← سعر)
+- [x] حاسبة سريعة (جرامات ← سعر)
 - [ ] Dark mode وعربي / إنجليزي
 
 ## المعمارية
