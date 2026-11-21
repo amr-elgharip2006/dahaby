@@ -63,10 +63,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         children: [
           DropdownButtonFormField<Asset>(
             initialValue: _asset,
-            decoration: const InputDecoration(
-              labelText: 'النوع',
-              border: OutlineInputBorder(),
-            ),
+            decoration: const InputDecoration(labelText: 'النوع'),
             items: [
               for (final asset in Asset.values)
                 DropdownMenuItem(value: asset, child: Text(asset.label)),
@@ -85,7 +82,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 8),
                 child: Text(_asset.unit),
               ),
-              border: const OutlineInputBorder(),
               errorText: _quantity.text.trim().isEmpty || valid
                   ? null
                   : 'اكتب رقم أكبر من صفر',
@@ -108,7 +104,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                   child: Text('جنيه'),
                 ),
                 helperText: 'بتتضاف على سعر الشراء بس',
-                border: OutlineInputBorder(),
               ),
               onChanged: (_) => setState(() {}),
             ),

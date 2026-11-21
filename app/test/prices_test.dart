@@ -185,6 +185,9 @@ void main() {
     }
 
     testWidgets('shows live prices', (tester) async {
+      // Tall enough to build every row of the lazy list.
+      await tester.binding.setSurfaceSize(const Size(420, 2000));
+      addTearDown(() => tester.binding.setSurfaceSize(null));
       await pump(
         tester,
         PricesState(snapshot: _snap(), connection: Connection.live),

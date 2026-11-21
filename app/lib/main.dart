@@ -3,22 +3,29 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+import 'data/assistant_repository.dart';
 import 'data/portfolio_store.dart';
 import 'data/price_repository.dart';
+import 'logic/assistant_cubit.dart';
 import 'logic/history_cubit.dart';
 import 'logic/portfolio_cubit.dart';
 import 'logic/prices_cubit.dart';
+import 'logic/settings_cubit.dart';
 import 'ui/home_screen.dart';
+import 'ui/theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   final prices = await Hive.openBox<String>(HiveSnapshotCache.boxName);
   final portfolio = await Hive.openBox<String>(HivePortfolioStore.boxName);
+  final settings = await Hive.openBox<String>(HiveSettingsStore.boxName);
   runApp(
     DahabyApp(
       repository: PriceRepository(cache: HiveSnapshotCache(prices)),
       portfolioStore: HivePortfolioStore(portfolio),
+      settingsStore: HiveSettingsStore(settings),
+      assistant: AssistantRepository(),
     ),
   );
 }
@@ -28,18 +35,14 @@ class DahabyApp extends StatelessWidget {
     super.key,
     required this.repository,
     required this.portfolioStore,
+    required this.settingsStore,
+    required this.assistant,
   });
 
   final PriceRepository repository;
   final PortfolioStore portfolioStore;
-
-  static const _gold = Color(0xFFB8860B);
-
-  ThemeData _theme(Brightness brightness) => ThemeData(
-    fontFamily: 'Cairo',
-    colorScheme: ColorScheme.fromSeed(seedColor: _gold, brightness: brightness),
-    cardTheme: const CardThemeData(margin: EdgeInsets.zero),
-  );
+  final SettingsStore settingsStore;
+  final AssistantRepository assistant;
 
   @override
   Widget build(BuildContext context) {
@@ -48,16 +51,21 @@ class DahabyApp extends StatelessWidget {
         BlocProvider(create: (_) => PricesCubit(repository)..start()),
         BlocProvider(create: (_) => PortfolioCubit(portfolioStore)..load()),
         BlocProvider(create: (_) => HistoryCubit(repository)),
+        BlocProvider(create: (_) => AssistantCubit(assistant)),
+        BlocProvider(create: (_) => SettingsCubit(settingsStore)),
       ],
-      child: MaterialApp(
-        title: 'دهبي',
-        debugShowCheckedModeBanner: false,
-        locale: const Locale('ar'),
-        supportedLocales: const [Locale('ar'), Locale('en')],
-        localizationsDelegates: GlobalMaterialLocalizations.delegates,
-        theme: _theme(Brightness.light),
-        darkTheme: _theme(Brightness.dark),
-        home: const HomeScreen(),
+      child: BlocBuilder<SettingsCubit, ThemeMode>(
+        builder: (context, themeMode) => MaterialApp(
+          title: 'دهبي',
+          debugShowCheckedModeBanner: false,
+          locale: const Locale('ar'),
+          supportedLocales: const [Locale('ar'), Locale('en')],
+          localizationsDelegates: GlobalMaterialLocalizations.delegates,
+          theme: dahabyTheme(Brightness.light),
+          darkTheme: dahabyTheme(Brightness.dark),
+          themeMode: themeMode,
+          home: const HomeScreen(),
+        ),
       ),
     );
   }

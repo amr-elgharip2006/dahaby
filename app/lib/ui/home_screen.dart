@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../logic/history_cubit.dart';
+import 'assistant_screen.dart';
 import 'calculator_screen.dart';
 import 'chart_screen.dart';
 import 'portfolio_screen.dart';
 import 'prices_screen.dart';
 
-/// The four tabs of the app.
+/// The five tabs of the app.
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -39,29 +40,47 @@ class _HomeScreenState extends State<HomeScreen> {
           PortfolioScreen(),
           ChartScreen(),
           CalculatorScreen(),
+          AssistantScreen(),
         ],
       ),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _index,
-        onDestinationSelected: _select,
-        destinations: const [
-          NavigationDestination(icon: Icon(Icons.show_chart), label: 'الأسعار'),
-          NavigationDestination(
-            icon: Icon(Icons.account_balance_wallet_outlined),
-            selectedIcon: Icon(Icons.account_balance_wallet),
-            label: 'محفظتي',
+      bottomNavigationBar: DecoratedBox(
+        decoration: BoxDecoration(
+          border: Border(
+            top: BorderSide(
+              color: Theme.of(context).colorScheme.outlineVariant,
+            ),
           ),
-          NavigationDestination(
-            icon: Icon(Icons.area_chart_outlined),
-            selectedIcon: Icon(Icons.area_chart),
-            label: 'الرسم',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.calculate_outlined),
-            selectedIcon: Icon(Icons.calculate),
-            label: 'الحاسبة',
-          ),
-        ],
+        ),
+        child: NavigationBar(
+          selectedIndex: _index,
+          onDestinationSelected: _select,
+          destinations: const [
+            NavigationDestination(
+              icon: Icon(Icons.show_chart),
+              label: 'الأسعار',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.account_balance_wallet_outlined),
+              selectedIcon: Icon(Icons.account_balance_wallet),
+              label: 'محفظتي',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.area_chart_outlined),
+              selectedIcon: Icon(Icons.area_chart),
+              label: 'الرسم',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.calculate_outlined),
+              selectedIcon: Icon(Icons.calculate),
+              label: 'الحاسبة',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.auto_awesome_outlined),
+              selectedIcon: Icon(Icons.auto_awesome),
+              label: 'المساعد',
+            ),
+          ],
+        ),
       ),
     );
   }

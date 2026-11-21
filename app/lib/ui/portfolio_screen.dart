@@ -7,6 +7,7 @@ import '../logic/prices_cubit.dart';
 import '../logic/valuation.dart';
 import 'format.dart';
 import 'holding_form.dart';
+import 'theme.dart';
 
 class PortfolioScreen extends StatelessWidget {
   const PortfolioScreen({super.key});
@@ -93,101 +94,117 @@ class _SummaryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
     final text = Theme.of(context).textTheme;
+    final soft = Brand.ink.withValues(alpha: 0.72);
     final percent = summary.profitPercent;
-    return Card(
-      color: scheme.primaryContainer,
-      child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'قيمة المحفظة الآن',
-              style: text.titleMedium?.copyWith(
-                color: scheme.onPrimaryContainer,
+    return GoldCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'قيمة المحفظة الآن',
+            style: text.titleMedium?.copyWith(
+              color: Brand.ink,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.baseline,
+            textBaseline: TextBaseline.alphabetic,
+            children: [
+              Text(
+                egp(summary.value),
+                textDirection: TextDirection.ltr,
+                style: text.headlineLarge?.copyWith(
+                  color: Brand.ink,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
-            ),
-            const SizedBox(height: 8),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.baseline,
-              textBaseline: TextBaseline.alphabetic,
-              children: [
-                Text(
-                  egp(summary.value),
-                  textDirection: TextDirection.ltr,
-                  style: text.headlineLarge?.copyWith(
-                    color: scheme.onPrimaryContainer,
-                    fontWeight: FontWeight.w700,
-                  ),
+              const SizedBox(width: 8),
+              Text('جنيه', style: text.titleMedium?.copyWith(color: soft)),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: [
+              Expanded(
+                child: _Stat(
+                  label: 'دفعت',
+                  value: egp(summary.cost),
+                  color: Brand.ink,
                 ),
-                const SizedBox(width: 8),
-                Text(
-                  'جنيه',
-                  style: text.titleMedium?.copyWith(
-                    color: scheme.onPrimaryContainer,
-                  ),
+              ),
+              Expanded(
+                child: _Stat(
+                  label: summary.profit < 0 ? 'الخسارة' : 'المكسب',
+                  value: percent == null
+                      ? signedEgp(summary.profit)
+                      : '${signedEgp(summary.profit)}  (${signedPercent(percent)})',
+                  // The light-mode colours stay readable on gold.
+                  color: summary.profit == 0
+                      ? Brand.ink
+                      : summary.profit > 0
+                      ? DahabyColors.light.gain
+                      : DahabyColors.light.loss,
+                  pill: summary.profit != 0,
                 ),
-              ],
-            ),
-            const SizedBox(height: 12),
-            Row(
-              children: [
-                Expanded(
-                  child: _Stat(
-                    label: 'دفعت',
-                    value: egp(summary.cost),
-                    color: scheme.onPrimaryContainer,
-                  ),
-                ),
-                Expanded(
-                  child: _Stat(
-                    label: summary.profit < 0 ? 'الخسارة' : 'المكسب',
-                    value: percent == null
-                        ? signedEgp(summary.profit)
-                        : '${signedEgp(summary.profit)}  (${signedPercent(percent)})',
-                    color: summary.profit == 0
-                        ? scheme.onPrimaryContainer
-                        : profitColor(context, summary.profit),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
 }
 
 class _Stat extends StatelessWidget {
-  const _Stat({required this.label, required this.value, required this.color});
+  const _Stat({
+    required this.label,
+    required this.value,
+    required this.color,
+    this.pill = false,
+  });
 
   final String label;
   final String value;
   final Color color;
 
+  /// Puts the value on a white pill so a green or red number reads on gold.
+  final bool pill;
+
   @override
   Widget build(BuildContext context) {
     final text = Theme.of(context).textTheme;
-    final scheme = Theme.of(context).colorScheme;
+    final number = Text(
+      value,
+      textDirection: TextDirection.ltr,
+      style: text.titleSmall?.copyWith(
+        color: color,
+        fontWeight: FontWeight.w700,
+      ),
+    );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           label,
-          style: text.bodySmall?.copyWith(color: scheme.onPrimaryContainer),
-        ),
-        const SizedBox(height: 2),
-        Text(
-          value,
-          textDirection: TextDirection.ltr,
-          style: text.titleSmall?.copyWith(
-            color: color,
-            fontWeight: FontWeight.w700,
+          style: text.bodySmall?.copyWith(
+            color: Brand.ink.withValues(alpha: 0.72),
           ),
         ),
+        const SizedBox(height: 4),
+        if (pill)
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.9),
+              borderRadius: BorderRadius.circular(999),
+            ),
+            child: number,
+          )
+        else
+          number,
       ],
     );
   }
@@ -215,7 +232,7 @@ class _HoldingTile extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
           color: scheme.errorContainer,
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(22),
         ),
         child: Icon(Icons.delete_outline, color: scheme.onErrorContainer),
       ),
@@ -245,7 +262,12 @@ class _HoldingTile extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(holding.asset.label, style: text.titleMedium),
+                      Text(
+                        holding.asset.label,
+                        style: text.titleMedium?.copyWith(
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                       const SizedBox(height: 4),
                       Text(
                         '${quantity(holding.quantity)} ${holding.asset.unit} · اشتريت بـ ${egp(holding.buyPrice)}',

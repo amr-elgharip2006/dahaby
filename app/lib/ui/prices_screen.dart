@@ -5,6 +5,9 @@ import 'package:intl/intl.dart' hide TextDirection;
 import '../data/price_snapshot.dart';
 import '../logic/prices_cubit.dart';
 import 'format.dart';
+import 'logo.dart';
+import 'theme.dart';
+import 'theme_toggle.dart';
 
 final _clock = DateFormat('HH:mm:ss', 'en_US');
 final _clockShort = DateFormat('HH:mm', 'en_US');
@@ -16,15 +19,20 @@ class PricesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('دهبي'),
+        title: const Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [DahabyLogo(size: 34), SizedBox(width: 10), Text('دهبي')],
+        ),
         actions: [
           BlocSelector<PricesCubit, PricesState, Connection>(
             selector: (state) => state.connection,
             builder: (context, connection) => Padding(
-              padding: const EdgeInsetsDirectional.only(end: 12),
+              padding: const EdgeInsetsDirectional.only(end: 4),
               child: _ConnectionChip(connection),
             ),
           ),
+          const ThemeToggle(),
+          const SizedBox(width: 4),
         ],
       ),
       body: BlocBuilder<PricesCubit, PricesState>(
@@ -63,11 +71,24 @@ class _PricesList extends StatelessWidget {
             title: 'السعر العالمي',
             subtitle: 'بيتحدث لوحده · جنيه للجرام',
             children: [
-              _PriceRow(label: 'ذهب عيار 24', value: global.gold24),
-              _PriceRow(label: 'ذهب عيار 21', value: global.gold21),
-              _PriceRow(label: 'ذهب عيار 18', value: global.gold18),
-              _PriceRow(label: 'فضة', value: global.silver),
               _PriceRow(
+                badge: '24',
+                label: 'ذهب عيار 24',
+                value: global.gold24,
+              ),
+              _PriceRow(
+                badge: '21',
+                label: 'ذهب عيار 21',
+                value: global.gold21,
+              ),
+              _PriceRow(
+                badge: '18',
+                label: 'ذهب عيار 18',
+                value: global.gold18,
+              ),
+              _PriceRow(badge: 'Ag', label: 'فضة', value: global.silver),
+              _PriceRow(
+                badge: 'oz',
                 label: 'أونصة الذهب',
                 value: global.goldOunceUsd,
                 unit: 'دولار',
@@ -84,11 +105,15 @@ class _PricesList extends StatelessWidget {
                 : 'سعر الصاغة · آخر قراءة ${_clockShort.format(local.asOf!.toLocal())}',
             children: [
               const _QuoteHeader(),
-              _QuoteRow(label: 'ذهب عيار 24', quote: local.gold24),
-              _QuoteRow(label: 'ذهب عيار 21', quote: local.gold21),
-              _QuoteRow(label: 'ذهب عيار 18', quote: local.gold18),
-              _QuoteRow(label: 'الجنيه الذهب', quote: local.goldPound),
-              _QuoteRow(label: 'فضة', quote: local.silver),
+              _QuoteRow(badge: '24', label: 'ذهب عيار 24', quote: local.gold24),
+              _QuoteRow(badge: '21', label: 'ذهب عيار 21', quote: local.gold21),
+              _QuoteRow(badge: '18', label: 'ذهب عيار 18', quote: local.gold18),
+              _QuoteRow(
+                badge: '8g',
+                label: 'الجنيه الذهب',
+                quote: local.goldPound,
+              ),
+              _QuoteRow(badge: 'Ag', label: 'فضة', quote: local.silver),
             ],
           ),
         ],
@@ -97,7 +122,11 @@ class _PricesList extends StatelessWidget {
           _Section(
             title: 'الدولار',
             children: [
-              _PriceRow(label: 'دولار أمريكي', value: snapshot.usdEgp),
+              _PriceRow(
+                badge: r'$',
+                label: 'دولار أمريكي',
+                value: snapshot.usdEgp,
+              ),
             ],
           ),
         ],
@@ -122,49 +151,56 @@ class _HeroCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
     final text = Theme.of(context).textTheme;
-    return Card(
-      color: scheme.primaryContainer,
-      child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'جرام الذهب عيار 21',
-              style: text.titleMedium?.copyWith(
-                color: scheme.onPrimaryContainer,
+    final soft = Brand.ink.withValues(alpha: 0.72);
+    return GoldCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'جرام الذهب عيار 21',
+            style: text.titleMedium?.copyWith(
+              color: Brand.ink,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.baseline,
+            textBaseline: TextBaseline.alphabetic,
+            children: [
+              // Shrinks on narrow phones instead of overflowing.
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: _AnimatedNumber(
+                    value: global.gold21,
+                    style: text.displaySmall?.copyWith(
+                      color: Brand.ink,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
               ),
-            ),
-            const SizedBox(height: 8),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.baseline,
-              textBaseline: TextBaseline.alphabetic,
-              children: [
-                _AnimatedNumber(
-                  value: global.gold21,
-                  style: text.displaySmall?.copyWith(
-                    color: scheme.onPrimaryContainer,
-                    fontWeight: FontWeight.w700,
-                  ),
+              const SizedBox(width: 8),
+              Text('جنيه', style: text.titleMedium?.copyWith(color: soft)),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              Icon(Icons.public, size: 16, color: soft),
+              const SizedBox(width: 6),
+              Flexible(
+                child: Text(
+                  'سعر عالمي · آخر تغيير ${_clock.format(updatedAt.toLocal())}',
+                  overflow: TextOverflow.ellipsis,
+                  style: text.bodySmall?.copyWith(color: soft),
                 ),
-                const SizedBox(width: 8),
-                Text(
-                  'جنيه',
-                  style: text.titleMedium?.copyWith(
-                    color: scheme.onPrimaryContainer,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'سعر عالمي · آخر تغيير ${_clock.format(updatedAt.toLocal())}',
-              style: text.bodySmall?.copyWith(color: scheme.onPrimaryContainer),
-            ),
-          ],
-        ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
@@ -183,11 +219,14 @@ class _Section extends StatelessWidget {
     final scheme = Theme.of(context).colorScheme;
     return Card(
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 14, 16, 6),
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 6),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(title, style: text.titleMedium),
+            Text(
+              title,
+              style: text.titleMedium?.copyWith(fontWeight: FontWeight.w700),
+            ),
             if (subtitle != null)
               Padding(
                 padding: const EdgeInsets.only(top: 2),
@@ -211,8 +250,14 @@ class _Section extends StatelessWidget {
 }
 
 class _PriceRow extends StatelessWidget {
-  const _PriceRow({required this.label, required this.value, this.unit});
+  const _PriceRow({
+    required this.badge,
+    required this.label,
+    required this.value,
+    this.unit,
+  });
 
+  final String badge;
   final String label;
   final double? value;
   final String? unit;
@@ -221,9 +266,11 @@ class _PriceRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final text = Theme.of(context).textTheme;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 12),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: Row(
         children: [
+          AssetBadge(badge, silver: badge == 'Ag'),
+          const SizedBox(width: 12),
           Expanded(child: Text(label, style: text.bodyLarge)),
           _AnimatedNumber(
             value: value,
@@ -251,6 +298,7 @@ class _QuoteHeader extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Row(
         children: [
+          const SizedBox(width: 50),
           const Expanded(flex: 4, child: SizedBox()),
           Expanded(
             flex: 3,
@@ -267,8 +315,13 @@ class _QuoteHeader extends StatelessWidget {
 }
 
 class _QuoteRow extends StatelessWidget {
-  const _QuoteRow({required this.label, required this.quote});
+  const _QuoteRow({
+    required this.badge,
+    required this.label,
+    required this.quote,
+  });
 
+  final String badge;
   final String label;
   final Quote? quote;
 
@@ -277,9 +330,11 @@ class _QuoteRow extends StatelessWidget {
     final text = Theme.of(context).textTheme;
     final number = text.titleSmall?.copyWith(fontWeight: FontWeight.w600);
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 12),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: Row(
         children: [
+          AssetBadge(badge, silver: badge == 'Ag'),
+          const SizedBox(width: 12),
           Expanded(flex: 4, child: Text(label, style: text.bodyLarge)),
           Expanded(
             flex: 3,
@@ -326,7 +381,8 @@ class _AnimatedNumberState extends State<_AnimatedNumber> {
     final after = widget.value;
     if (before == null || after == null || before == after) return;
     setState(() {
-      _flash = after > before ? Colors.green.shade700 : Colors.red.shade700;
+      final colors = DahabyColors.of(context);
+      _flash = after > before ? colors.gain : colors.loss;
     });
     Future<void>.delayed(const Duration(milliseconds: 900), () {
       if (mounted) setState(() => _flash = null);
@@ -353,7 +409,7 @@ class _ConnectionChip extends StatelessWidget {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final (label, color) = switch (connection) {
-      Connection.live => ('مباشر', Colors.green.shade600),
+      Connection.live => ('مباشر', DahabyColors.of(context).gain),
       Connection.connecting => ('جاري الاتصال', scheme.outline),
       Connection.offline => ('غير متصل', scheme.error),
     };

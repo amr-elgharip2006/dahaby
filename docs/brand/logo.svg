@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="دهبي">
+  <defs>
+    <linearGradient id="gold" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6DC8C"/>
+      <stop offset="0.5" stop-color="#E9BE4C"/>
+      <stop offset="1" stop-color="#C99416"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#gold)"/>
+  <g fill="#2B1F00" stroke="#2B1F00" stroke-width="24" stroke-linejoin="round">
+  <path d="M192 282 L320 282 L294 218 L218 218 Z"/>
+  <path d="M106 388 L234 388 L208 324 L132 324 Z"/>
+  <path d="M278 388 L406 388 L380 324 L304 324 Z"/>
+  </g>
+  <path d="M388 98 L399.44 138.56 L440 150 L399.44 161.44 L388 202 L376.56 161.44 L336 150 L376.56 138.56 Z" fill="#FFFFFF"/>
+</svg>

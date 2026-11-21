@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart' hide TextDirection;
 
+import 'theme.dart';
+
 final _money = NumberFormat('#,##0.00', 'en_US');
 final _quantity = NumberFormat('#,##0.###', 'en_US');
 
@@ -20,7 +22,7 @@ String shortDate(DateTime d) => DateFormat('d/M/y', 'en_US').format(d);
 
 /// Green for a gain, red for a loss, neutral for zero.
 Color profitColor(BuildContext context, double v) {
-  if (v > 0) return Colors.green.shade600;
-  if (v < 0) return Theme.of(context).colorScheme.error;
+  if (v > 0) return DahabyColors.of(context).gain;
+  if (v < 0) return DahabyColors.of(context).loss;
   return Theme.of(context).colorScheme.onSurfaceVariant;
 }

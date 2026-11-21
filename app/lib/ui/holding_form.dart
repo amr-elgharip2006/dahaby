@@ -116,10 +116,7 @@ class _HoldingFormState extends State<HoldingForm> {
           children: [
             DropdownButtonFormField<Asset>(
               initialValue: _asset,
-              decoration: const InputDecoration(
-                labelText: 'النوع',
-                border: OutlineInputBorder(),
-              ),
+              decoration: const InputDecoration(labelText: 'النوع'),
               items: [
                 for (final asset in Asset.values)
                   DropdownMenuItem(value: asset, child: Text(asset.label)),
@@ -144,7 +141,6 @@ class _HoldingFormState extends State<HoldingForm> {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Text(_asset.unit),
                 ),
-                border: const OutlineInputBorder(),
               ),
               validator: _positive,
             ),
@@ -165,7 +161,6 @@ class _HoldingFormState extends State<HoldingForm> {
                 helperText: editing || _priceTouched
                     ? null
                     : 'مكتوب سعر النهارده، غيّره لو اشتريت بسعر تاني',
-                border: const OutlineInputBorder(),
               ),
               onChanged: (_) => setState(() => _priceTouched = true),
               validator: _positive,
@@ -177,7 +172,6 @@ class _HoldingFormState extends State<HoldingForm> {
               child: InputDecorator(
                 decoration: const InputDecoration(
                   labelText: 'تاريخ الشراء',
-                  border: OutlineInputBorder(),
                   suffixIcon: Icon(Icons.calendar_today),
                 ),
                 child: Text(
