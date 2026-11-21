@@ -65,8 +65,9 @@ http.Client _upstream({double Function()? goldUsd, bool daleelakDown = false}) {
         200,
       );
     }
-    if (url.contains('XAG'))
+    if (url.contains('XAG')) {
       return http.Response(jsonEncode({'price': 31.1035}), 200);
+    }
     if (url.contains('daleelak')) {
       if (daleelakDown) return http.Response('down', 500);
       return http.Response(jsonEncode(_feed), 200, headers: {'etag': '"v1"'});
