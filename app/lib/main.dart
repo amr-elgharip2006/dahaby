@@ -36,6 +36,7 @@ class DahabyApp extends StatelessWidget {
   static const _gold = Color(0xFFB8860B);
 
   ThemeData _theme(Brightness brightness) => ThemeData(
+    fontFamily: 'Cairo',
     colorScheme: ColorScheme.fromSeed(seedColor: _gold, brightness: brightness),
     cardTheme: const CardThemeData(margin: EdgeInsets.zero),
   );
