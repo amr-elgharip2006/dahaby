@@ -1,0 +1,1477 @@
+{
+ "source": "Daleelak (getdaleelak.com)",
+ "fetchedAt": "2026-11-21T10:01:19.838Z",
+ "note": "Daily ranges in EGP. buyLo/buyHi: what dealers pay. sellLo/sellHi: what dealers charge. global: world price converted to EGP.",
+ "assets": {
+  "USD-EGP": {
+   "unit": "EGP/USD",
+   "series": [
+    {
+     "date": "2026-10-23",
+     "buyLo": 54.6,
+     "buyHi": 55.27,
+     "sellLo": 54.7,
+     "sellHi": 55.37,
+     "global": 55.22
+    },
+    {
+     "date": "2026-10-24",
+     "buyLo": 54.6,
+     "buyHi": 55.27,
+     "sellLo": 54.7,
+     "sellHi": 55.37,
+     "global": 55.29
+    },
+    {
+     "date": "2026-10-25",
+     "buyLo": 55.62,
+     "buyHi": 55.83,
+     "sellLo": 55.72,
+     "sellHi": 55.93,
+     "global": 55.28
+    },
+    {
+     "date": "2026-10-26",
+     "buyLo": 56.19,
+     "buyHi": 56.25,
+     "sellLo": 56.28,
+     "sellHi": 56.35,
+     "global": 55.68
+    },
+    {
+     "date": "2026-10-27",
+     "buyLo": 55.97,
+     "buyHi": 56.25,
+     "sellLo": 56.07,
+     "sellHi": 56.35,
+     "global": 56.27
+    },
+    {
+     "date": "2026-10-28",
+     "buyLo": 55.97,
+     "buyHi": 56.25,
+     "sellLo": 56.07,
+     "sellHi": 56.35,
+     "global": 56.09
+    },
+    {
+     "date": "2026-10-29",
+     "buyLo": 55.94,
+     "buyHi": 56.09,
+     "sellLo": 56.04,
+     "sellHi": 56.19,
+     "global": 56.12
+    },
+    {
+     "date": "2026-10-30",
+     "buyLo": 55.94,
+     "buyHi": 56.09,
+     "sellLo": 56.04,
+     "sellHi": 56.19,
+     "global": 56.04
+    },
+    {
+     "date": "2026-10-31",
+     "buyLo": 55.94,
+     "buyHi": 56.09,
+     "sellLo": 56.04,
+     "sellHi": 56.19,
+     "global": 56.03
+    },
+    {
+     "date": "2026-11-01",
+     "buyLo": 55.64,
+     "buyHi": 56.07,
+     "sellLo": 55.74,
+     "sellHi": 56.17,
+     "global": 56.03
+    },
+    {
+     "date": "2026-11-02",
+     "buyLo": 55.3,
+     "buyHi": 56.07,
+     "sellLo": 55.4,
+     "sellHi": 56.17,
+     "global": 55.96
+    },
+    {
+     "date": "2026-11-03",
+     "buyLo": 55.19,
+     "buyHi": 55.41,
+     "sellLo": 55.29,
+     "sellHi": 55.51,
+     "global": 55.42
+    },
+    {
+     "date": "2026-11-04",
+     "buyLo": 54.6,
+     "buyHi": 55.31,
+     "sellLo": 54.7,
+     "sellHi": 55.41,
+     "global": 55.37
+    },
+    {
+     "date": "2026-11-05",
+     "buyLo": 53.77,
+     "buyHi": 54.67,
+     "sellLo": 53.87,
+     "sellHi": 54.77,
+     "global": 54.77
+    },
+    {
+     "date": "2026-11-06",
+     "buyLo": 53.77,
+     "buyHi": 54.67,
+     "sellLo": 53.87,
+     "sellHi": 54.77,
+     "global": 53.9
+    },
+    {
+     "date": "2026-11-07",
+     "buyLo": 53.77,
+     "buyHi": 54.67,
+     "sellLo": 53.87,
+     "sellHi": 54.77,
+     "global": 53.9
+    },
+    {
+     "date": "2026-11-08",
+     "buyLo": 53.87,
+     "buyHi": 54.35,
+     "sellLo": 53.97,
+     "sellHi": 54.45,
+     "global": 53.9
+    },
+    {
+     "date": "2026-11-09",
+     "buyLo": 53.88,
+     "buyHi": 54.19,
+     "sellLo": 53.98,
+     "sellHi": 54.29,
+     "global": 54.03
+    },
+    {
+     "date": "2026-11-10",
+     "buyLo": 53.22,
+     "buyHi": 53.95,
+     "sellLo": 53.32,
+     "sellHi": 54.05,
+     "global": 54.07
+    },
+    {
+     "date": "2026-11-11",
+     "buyLo": 53.29,
+     "buyHi": 53.52,
+     "sellLo": 53.39,
+     "sellHi": 53.62,
+     "global": 53.35
+    },
+    {
+     "date": "2026-11-12",
+     "buyLo": 53.34,
+     "buyHi": 53.52,
+     "sellLo": 53.44,
+     "sellHi": 53.62,
+     "global": 53.55
+    },
+    {
+     "date": "2026-11-13",
+     "buyLo": 53.34,
+     "buyHi": 53.52,
+     "sellLo": 53.44,
+     "sellHi": 53.62,
+     "global": 53.45
+    },
+    {
+     "date": "2026-11-14",
+     "buyLo": 53.34,
+     "buyHi": 53.52,
+     "sellLo": 53.44,
+     "sellHi": 53.62,
+     "global": 53.44
+    },
+    {
+     "date": "2026-11-15",
+     "buyLo": 53.4,
+     "buyHi": 53.79,
+     "sellLo": 53.5,
+     "sellHi": 53.89,
+     "global": 53.44
+    },
+    {
+     "date": "2026-11-16",
+     "buyLo": 53.59,
+     "buyHi": 53.76,
+     "sellLo": 53.69,
+     "sellHi": 53.86,
+     "global": 53.74
+    },
+    {
+     "date": "2026-11-17",
+     "buyLo": 53.64,
+     "buyHi": 53.68,
+     "sellLo": 53.74,
+     "sellHi": 53.78,
+     "global": 53.68
+    },
+    {
+     "date": "2026-11-18",
+     "buyLo": 53.66,
+     "buyHi": 53.8,
+     "sellLo": 53.76,
+     "sellHi": 53.9,
+     "global": 53.72
+    },
+    {
+     "date": "2026-11-19",
+     "buyLo": 53.72,
+     "buyHi": 53.85,
+     "sellLo": 53.81,
+     "sellHi": 53.95,
+     "global": 53.79
+    },
+    {
+     "date": "2026-11-20",
+     "buyLo": 53.72,
+     "buyHi": 53.85,
+     "sellLo": 53.81,
+     "sellHi": 53.95,
+     "global": 53.81
+    },
+    {
+     "date": "2026-11-21",
+     "buyLo": 53.72,
+     "buyHi": 53.85,
+     "sellLo": 53.81,
+     "sellHi": 53.95,
+     "global": 53.81
+    }
+   ]
+  },
+  "GOLD24K-EGP": {
+   "unit": "EGP/g",
+   "series": [
+    {
+     "date": "2026-10-23",
+     "buyLo": 7081.42,
+     "buyHi": 7148,
+     "sellLo": 7159.44,
+     "sellHi": 7203.48,
+     "global": 7102.49
+    },
+    {
+     "date": "2026-10-24",
+     "buyLo": 7081.87,
+     "buyHi": 7154,
+     "sellLo": 7160.39,
+     "sellHi": 7203.48,
+     "global": 7104.79
+    },
+    {
+     "date": "2026-10-25",
+     "buyLo": 7081.87,
+     "buyHi": 7166,
+     "sellLo": 7160.39,
+     "sellHi": 7225.55,
+     "global": 7103.89
+    },
+    {
+     "date": "2026-10-26",
+     "buyLo": 7148,
+     "buyHi": 7246.17,
+     "sellLo": 7171,
+     "sellHi": 7293.38,
+     "global": 7198.85
+    },
+    {
+     "date": "2026-10-27",
+     "buyLo": 7148,
+     "buyHi": 7286,
+     "sellLo": 7171,
+     "sellHi": 7336.89,
+     "global": 7341.4
+    },
+    {
+     "date": "2026-10-28",
+     "buyLo": 7148,
+     "buyHi": 7263,
+     "sellLo": 7171,
+     "sellHi": 7329.01,
+     "global": 7289.17
+    },
+    {
+     "date": "2026-10-29",
+     "buyLo": 7148,
+     "buyHi": 7223,
+     "sellLo": 7171,
+     "sellHi": 7276.8,
+     "global": 7231.69
+    },
+    {
+     "date": "2026-10-30",
+     "buyLo": 7037.62,
+     "buyHi": 7063,
+     "sellLo": 7086,
+     "sellHi": 7119.62,
+     "global": 6992.59
+    },
+    {
+     "date": "2026-10-31",
+     "buyLo": 7000,
+     "buyHi": 7048.95,
+     "sellLo": 7046,
+     "sellHi": 7119.62,
+     "global": 6982.75
+    },
+    {
+     "date": "2026-11-01",
+     "buyLo": 6977,
+     "buyHi": 7048.95,
+     "sellLo": 7011,
+     "sellHi": 7119.62,
+     "global": 6983.06
+    },
+    {
+     "date": "2026-11-02",
+     "buyLo": 6983.55,
+     "buyHi": 7058.11,
+     "sellLo": 7051,
+     "sellHi": 7116.44,
+     "global": 7115.03
+    },
+    {
+     "date": "2026-11-03",
+     "buyLo": 6954.88,
+     "buyHi": 7006.97,
+     "sellLo": 7017,
+     "sellHi": 7070.6,
+     "global": 7000.44
+    },
+    {
+     "date": "2026-11-04",
+     "buyLo": 7085.75,
+     "buyHi": 7108,
+     "sellLo": 7131,
+     "sellHi": 7176.34,
+     "global": 7231.56
+    },
+    {
+     "date": "2026-11-05",
+     "buyLo": 7075.42,
+     "buyHi": 7118.68,
+     "sellLo": 7137,
+     "sellHi": 7190.04,
+     "global": 7230.87
+    },
+    {
+     "date": "2026-11-06",
+     "buyLo": 7051.5,
+     "buyHi": 7101.08,
+     "sellLo": 7102.75,
+     "sellHi": 7155.68,
+     "global": 7067.14
+    },
+    {
+     "date": "2026-11-07",
+     "buyLo": 7045.75,
+     "buyHi": 7087.06,
+     "sellLo": 7097,
+     "sellHi": 7146.04,
+     "global": 7056.79
+    },
+    {
+     "date": "2026-11-08",
+     "buyLo": 7057.25,
+     "buyHi": 7083.79,
+     "sellLo": 7103,
+     "sellHi": 7158.75,
+     "global": 7056.94
+    },
+    {
+     "date": "2026-11-09",
+     "buyLo": 7058.97,
+     "buyHi": 7108,
+     "sellLo": 7120.91,
+     "sellHi": 7163.53,
+     "global": 7131.66
+    },
+    {
+     "date": "2026-11-10",
+     "buyLo": 6971.5,
+     "buyHi": 7000,
+     "sellLo": 7023,
+     "sellHi": 7055.43,
+     "global": 7003.31
+    },
+    {
+     "date": "2026-11-11",
+     "buyLo": 6907.17,
+     "buyHi": 6953.02,
+     "sellLo": 6971,
+     "sellHi": 7022.72,
+     "global": 6842.26
+    },
+    {
+     "date": "2026-11-12",
+     "buyLo": 6750.23,
+     "buyHi": 6783.89,
+     "sellLo": 6817,
+     "sellHi": 6851.9,
+     "global": 6686.65
+    },
+    {
+     "date": "2026-11-13",
+     "buyLo": 6748.5,
+     "buyHi": 6773.14,
+     "sellLo": 6794,
+     "sellHi": 6841.05,
+     "global": 6675.48
+    },
+    {
+     "date": "2026-11-14",
+     "buyLo": 6749.71,
+     "buyHi": 6783,
+     "sellLo": 6806,
+     "sellHi": 6841.05,
+     "global": 6679.06
+    },
+    {
+     "date": "2026-11-15",
+     "buyLo": 6749.71,
+     "buyHi": 6790.56,
+     "sellLo": 6811,
+     "sellHi": 6841.94,
+     "global": 6679.33
+    },
+    {
+     "date": "2026-11-16",
+     "buyLo": 6708.5,
+     "buyHi": 6730.75,
+     "sellLo": 6737,
+     "sellHi": 6807.61,
+     "global": 6664.84
+    },
+    {
+     "date": "2026-11-17",
+     "buyLo": 6700.25,
+     "buyHi": 6729.43,
+     "sellLo": 6749,
+     "sellHi": 6788.94,
+     "global": 6658.05
+    },
+    {
+     "date": "2026-11-18",
+     "buyLo": 6529.06,
+     "buyHi": 6572.02,
+     "sellLo": 6589,
+     "sellHi": 6627,
+     "global": 6467.77
+    },
+    {
+     "date": "2026-11-19",
+     "buyLo": 6441.9,
+     "buyHi": 6474,
+     "sellLo": 6497,
+     "sellHi": 6538.25,
+     "global": 6365.54
+    },
+    {
+     "date": "2026-11-20",
+     "buyLo": 6213.59,
+     "buyHi": 6247.69,
+     "sellLo": 6257,
+     "sellHi": 6307,
+     "global": 6122.93
+    },
+    {
+     "date": "2026-11-21",
+     "buyLo": 6171.5,
+     "buyHi": 6250.26,
+     "sellLo": 6228.5,
+     "sellHi": 6307,
+     "global": 6123.1
+    }
+   ]
+  },
+  "GOLD21K-EGP": {
+   "unit": "EGP/g",
+   "series": [
+    {
+     "date": "2026-10-23",
+     "buyLo": 6197,
+     "buyHi": 6255,
+     "sellLo": 6265.3,
+     "sellHi": 6303.05,
+     "global": 6214.68
+    },
+    {
+     "date": "2026-10-24",
+     "buyLo": 6197.4,
+     "buyHi": 6260,
+     "sellLo": 6266.1,
+     "sellHi": 6303.05,
+     "global": 6216.69
+    },
+    {
+     "date": "2026-10-25",
+     "buyLo": 6197.4,
+     "buyHi": 6270,
+     "sellLo": 6266.1,
+     "sellHi": 6303.05,
+     "global": 6215.91
+    },
+    {
+     "date": "2026-10-26",
+     "buyLo": 6255,
+     "buyHi": 6320,
+     "sellLo": 6275,
+     "sellHi": 6365.81,
+     "global": 6299
+    },
+    {
+     "date": "2026-10-27",
+     "buyLo": 6255,
+     "buyHi": 6375,
+     "sellLo": 6275,
+     "sellHi": 6419.78,
+     "global": 6423.72
+    },
+    {
+     "date": "2026-10-28",
+     "buyLo": 6255,
+     "buyHi": 6355,
+     "sellLo": 6275,
+     "sellHi": 6412.88,
+     "global": 6378.02
+    },
+    {
+     "date": "2026-10-29",
+     "buyLo": 6255,
+     "buyHi": 6320,
+     "sellLo": 6275,
+     "sellHi": 6367.2,
+     "global": 6327.73
+    },
+    {
+     "date": "2026-10-30",
+     "buyLo": 6167.83,
+     "buyHi": 6180,
+     "sellLo": 6200,
+     "sellHi": 6230.3,
+     "global": 6118.51
+    },
+    {
+     "date": "2026-10-31",
+     "buyLo": 6125,
+     "buyHi": 6167.83,
+     "sellLo": 6165,
+     "sellHi": 6229.67,
+     "global": 6109.91
+    },
+    {
+     "date": "2026-11-01",
+     "buyLo": 6104,
+     "buyHi": 6167.83,
+     "sellLo": 6134,
+     "sellHi": 6229.67,
+     "global": 6110.18
+    },
+    {
+     "date": "2026-11-02",
+     "buyLo": 6111.3,
+     "buyHi": 6149,
+     "sellLo": 6169,
+     "sellHi": 6201.72,
+     "global": 6225.65
+    },
+    {
+     "date": "2026-11-03",
+     "buyLo": 6086.2,
+     "buyHi": 6119,
+     "sellLo": 6139,
+     "sellHi": 6175.05,
+     "global": 6125.39
+    },
+    {
+     "date": "2026-11-04",
+     "buyLo": 6200,
+     "buyHi": 6219,
+     "sellLo": 6239,
+     "sellHi": 6276.8,
+     "global": 6327.61
+    },
+    {
+     "date": "2026-11-05",
+     "buyLo": 6191.7,
+     "buyHi": 6228.85,
+     "sellLo": 6244,
+     "sellHi": 6291.29,
+     "global": 6327.01
+    },
+    {
+     "date": "2026-11-06",
+     "buyLo": 6170,
+     "buyHi": 6200.5,
+     "sellLo": 6215,
+     "sellHi": 6262,
+     "global": 6183.74
+    },
+    {
+     "date": "2026-11-07",
+     "buyLo": 6165,
+     "buyHi": 6190.73,
+     "sellLo": 6209,
+     "sellHi": 6252.79,
+     "global": 6174.69
+    },
+    {
+     "date": "2026-11-08",
+     "buyLo": 6175,
+     "buyHi": 6195,
+     "sellLo": 6215,
+     "sellHi": 6252.79,
+     "global": 6174.83
+    },
+    {
+     "date": "2026-11-09",
+     "buyLo": 6199.5,
+     "buyHi": 6219,
+     "sellLo": 6239,
+     "sellHi": 6268.09,
+     "global": 6240.21
+    },
+    {
+     "date": "2026-11-10",
+     "buyLo": 6100,
+     "buyHi": 6125,
+     "sellLo": 6145,
+     "sellHi": 6173.5,
+     "global": 6127.9
+    },
+    {
+     "date": "2026-11-11",
+     "buyLo": 6044.5,
+     "buyHi": 6083.89,
+     "sellLo": 6099,
+     "sellHi": 6144.88,
+     "global": 5986.98
+    },
+    {
+     "date": "2026-11-12",
+     "buyLo": 5907.2,
+     "buyHi": 5935.9,
+     "sellLo": 5964,
+     "sellHi": 5995.41,
+     "global": 5850.82
+    },
+    {
+     "date": "2026-11-13",
+     "buyLo": 5905,
+     "buyHi": 5926.5,
+     "sellLo": 5944,
+     "sellHi": 5985.92,
+     "global": 5841.05
+    },
+    {
+     "date": "2026-11-14",
+     "buyLo": 5906.7,
+     "buyHi": 5935,
+     "sellLo": 5955,
+     "sellHi": 5985.92,
+     "global": 5844.17
+    },
+    {
+     "date": "2026-11-15",
+     "buyLo": 5906.7,
+     "buyHi": 5930,
+     "sellLo": 5959,
+     "sellHi": 5985.92,
+     "global": 5844.42
+    },
+    {
+     "date": "2026-11-16",
+     "buyLo": 5870,
+     "buyHi": 5890.1,
+     "sellLo": 5894,
+     "sellHi": 5956.66,
+     "global": 5831.74
+    },
+    {
+     "date": "2026-11-17",
+     "buyLo": 5863.4,
+     "buyHi": 5885,
+     "sellLo": 5905,
+     "sellHi": 5940.32,
+     "global": 5825.8
+    },
+    {
+     "date": "2026-11-18",
+     "buyLo": 5713.6,
+     "buyHi": 5745,
+     "sellLo": 5765,
+     "sellHi": 5786.47,
+     "global": 5659.3
+    },
+    {
+     "date": "2026-11-19",
+     "buyLo": 5637.3,
+     "buyHi": 5664.18,
+     "sellLo": 5684,
+     "sellHi": 5720.97,
+     "global": 5569.85
+    },
+    {
+     "date": "2026-11-20",
+     "buyLo": 5437.6,
+     "buyHi": 5445,
+     "sellLo": 5474,
+     "sellHi": 5518.63,
+     "global": 5357.57
+    },
+    {
+     "date": "2026-11-21",
+     "buyLo": 5400,
+     "buyHi": 5442.17,
+     "sellLo": 5450,
+     "sellHi": 5518.63,
+     "global": 5357.72
+    }
+   ]
+  },
+  "GOLD18K-EGP": {
+   "unit": "EGP/g",
+   "series": [
+    {
+     "date": "2026-10-23",
+     "buyLo": 5344.25,
+     "buyHi": 5362,
+     "sellLo": 5378,
+     "sellHi": 5387.25,
+     "global": 5326.87
+    },
+    {
+     "date": "2026-10-24",
+     "buyLo": 5344.25,
+     "buyHi": 5366,
+     "sellLo": 5382,
+     "sellHi": 5387.25,
+     "global": 5328.59
+    },
+    {
+     "date": "2026-10-25",
+     "buyLo": 5361.5,
+     "buyHi": 5374,
+     "sellLo": 5379,
+     "sellHi": 5391.5,
+     "global": 5327.92
+    },
+    {
+     "date": "2026-10-26",
+     "buyLo": 5362,
+     "buyHi": 5417,
+     "sellLo": 5379,
+     "sellHi": 5438.5,
+     "global": 5399.14
+    },
+    {
+     "date": "2026-10-27",
+     "buyLo": 5362,
+     "buyHi": 5464,
+     "sellLo": 5379,
+     "sellHi": 5485.75,
+     "global": 5506.05
+    },
+    {
+     "date": "2026-10-28",
+     "buyLo": 5362,
+     "buyHi": 5447,
+     "sellLo": 5379,
+     "sellHi": 5477.25,
+     "global": 5466.88
+    },
+    {
+     "date": "2026-10-29",
+     "buyLo": 5362,
+     "buyHi": 5417,
+     "sellLo": 5379,
+     "sellHi": 5442.75,
+     "global": 5423.77
+    },
+    {
+     "date": "2026-10-30",
+     "buyLo": 5292.75,
+     "buyHi": 5362,
+     "sellLo": 5314,
+     "sellHi": 5379,
+     "global": 5244.44
+    },
+    {
+     "date": "2026-10-31",
+     "buyLo": 5250,
+     "buyHi": 5362,
+     "sellLo": 5284,
+     "sellHi": 5379,
+     "global": 5237.06
+    },
+    {
+     "date": "2026-11-01",
+     "buyLo": 5232,
+     "buyHi": 5362,
+     "sellLo": 5258,
+     "sellHi": 5379,
+     "global": 5237.3
+    },
+    {
+     "date": "2026-11-02",
+     "buyLo": 5254.25,
+     "buyHi": 5362,
+     "sellLo": 5288,
+     "sellHi": 5379,
+     "global": 5336.27
+    },
+    {
+     "date": "2026-11-03",
+     "buyLo": 5228.5,
+     "buyHi": 5362,
+     "sellLo": 5271.5,
+     "sellHi": 5379,
+     "global": 5250.33
+    },
+    {
+     "date": "2026-11-04",
+     "buyLo": 5314.25,
+     "buyHi": 5331,
+     "sellLo": 5348,
+     "sellHi": 5357.25,
+     "global": 5423.67
+    },
+    {
+     "date": "2026-11-05",
+     "buyLo": 5314.25,
+     "buyHi": 5335,
+     "sellLo": 5352,
+     "sellHi": 5365.75,
+     "global": 5423.15
+    },
+    {
+     "date": "2026-11-06",
+     "buyLo": 5288.5,
+     "buyHi": 5310,
+     "sellLo": 5327,
+     "sellHi": 5327.25,
+     "global": 5300.35
+    },
+    {
+     "date": "2026-11-07",
+     "buyLo": 5284.25,
+     "buyHi": 5305,
+     "sellLo": 5322,
+     "sellHi": 5327.25,
+     "global": 5292.59
+    },
+    {
+     "date": "2026-11-08",
+     "buyLo": 5292.75,
+     "buyHi": 5310,
+     "sellLo": 5327,
+     "sellHi": 5335.75,
+     "global": 5292.71
+    },
+    {
+     "date": "2026-11-09",
+     "buyLo": 5314.25,
+     "buyHi": 5331,
+     "sellLo": 5348,
+     "sellHi": 5357.25,
+     "global": 5348.75
+    },
+    {
+     "date": "2026-11-10",
+     "buyLo": 5228.5,
+     "buyHi": 5250,
+     "sellLo": 5267,
+     "sellHi": 5271.5,
+     "global": 5252.48
+    },
+    {
+     "date": "2026-11-11",
+     "buyLo": 5194.25,
+     "buyHi": 5211,
+     "sellLo": 5228,
+     "sellHi": 5237.25,
+     "global": 5131.7
+    },
+    {
+     "date": "2026-11-12",
+     "buyLo": 5087,
+     "buyHi": 5087.25,
+     "sellLo": 5112,
+     "sellHi": 5130,
+     "global": 5014.99
+    },
+    {
+     "date": "2026-11-13",
+     "buyLo": 5061.5,
+     "buyHi": 5078,
+     "sellLo": 5095,
+     "sellHi": 5104.25,
+     "global": 5006.61
+    },
+    {
+     "date": "2026-11-14",
+     "buyLo": 5082.75,
+     "buyHi": 5087,
+     "sellLo": 5104,
+     "sellHi": 5112.75,
+     "global": 5009.29
+    },
+    {
+     "date": "2026-11-15",
+     "buyLo": 5082,
+     "buyHi": 5082.75,
+     "sellLo": 5108,
+     "sellHi": 5112.75,
+     "global": 5009.5
+    },
+    {
+     "date": "2026-11-16",
+     "buyLo": 5031.5,
+     "buyHi": 5035,
+     "sellLo": 5052,
+     "sellHi": 5065.75,
+     "global": 4998.63
+    },
+    {
+     "date": "2026-11-17",
+     "buyLo": 5027.25,
+     "buyHi": 5044,
+     "sellLo": 5061,
+     "sellHi": 5070,
+     "global": 4993.54
+    },
+    {
+     "date": "2026-11-18",
+     "buyLo": 4915.75,
+     "buyHi": 4924,
+     "sellLo": 4941,
+     "sellHi": 4958.5,
+     "global": 4850.83
+    },
+    {
+     "date": "2026-11-19",
+     "buyLo": 4838.5,
+     "buyHi": 4855,
+     "sellLo": 4872,
+     "sellHi": 4881.5,
+     "global": 4774.16
+    },
+    {
+     "date": "2026-11-20",
+     "buyLo": 4662.75,
+     "buyHi": 4667,
+     "sellLo": 4692,
+     "sellHi": 4705.75,
+     "global": 4592.2
+    },
+    {
+     "date": "2026-11-21",
+     "buyLo": 4628.5,
+     "buyHi": 4654,
+     "sellLo": 4671.5,
+     "sellHi": 4680,
+     "global": 4592.33
+    }
+   ]
+  },
+  "GOLDPOUND-EGP": {
+   "unit": "EGP",
+   "series": [
+    {
+     "date": "2026-10-23",
+     "buyLo": 49745,
+     "buyHi": 50040,
+     "sellLo": 50200,
+     "sellHi": 50524,
+     "global": 49717.41
+    },
+    {
+     "date": "2026-10-24",
+     "buyLo": 49735,
+     "buyHi": 50080,
+     "sellLo": 50240,
+     "sellHi": 50517,
+     "global": 49733.5
+    },
+    {
+     "date": "2026-10-25",
+     "buyLo": 49735,
+     "buyHi": 50040,
+     "sellLo": 50200,
+     "sellHi": 50517,
+     "global": 49727.25
+    },
+    {
+     "date": "2026-10-26",
+     "buyLo": 50040,
+     "buyHi": 50456,
+     "sellLo": 50200,
+     "sellHi": 51250,
+     "global": 50391.98
+    },
+    {
+     "date": "2026-10-27",
+     "buyLo": 50040,
+     "buyHi": 50935,
+     "sellLo": 50200,
+     "sellHi": 51728,
+     "global": 51389.78
+    },
+    {
+     "date": "2026-10-28",
+     "buyLo": 50040,
+     "buyHi": 50863,
+     "sellLo": 50200,
+     "sellHi": 51580,
+     "global": 51024.17
+    },
+    {
+     "date": "2026-10-29",
+     "buyLo": 50040,
+     "buyHi": 50418,
+     "sellLo": 50200,
+     "sellHi": 51127,
+     "global": 50621.82
+    },
+    {
+     "date": "2026-10-30",
+     "buyLo": 49400,
+     "buyHi": 50040,
+     "sellLo": 49800,
+     "sellHi": 50230,
+     "global": 48948.11
+    },
+    {
+     "date": "2026-10-31",
+     "buyLo": 49000,
+     "buyHi": 50040,
+     "sellLo": 49400,
+     "sellHi": 50206,
+     "global": 48879.26
+    },
+    {
+     "date": "2026-11-01",
+     "buyLo": 48880,
+     "buyHi": 50040,
+     "sellLo": 49280,
+     "sellHi": 50206,
+     "global": 48881.42
+    },
+    {
+     "date": "2026-11-02",
+     "buyLo": 49040,
+     "buyHi": 50040,
+     "sellLo": 49440,
+     "sellHi": 50200,
+     "global": 49805.21
+    },
+    {
+     "date": "2026-11-03",
+     "buyLo": 48363,
+     "buyHi": 50040,
+     "sellLo": 49200,
+     "sellHi": 50200,
+     "global": 49003.09
+    },
+    {
+     "date": "2026-11-04",
+     "buyLo": 49600,
+     "buyHi": 49878,
+     "sellLo": 50000,
+     "sellHi": 50602,
+     "global": 50620.89
+    },
+    {
+     "date": "2026-11-05",
+     "buyLo": 49600,
+     "buyHi": 49690,
+     "sellLo": 50080,
+     "sellHi": 50490,
+     "global": 50616.07
+    },
+    {
+     "date": "2026-11-06",
+     "buyLo": 49360,
+     "buyHi": 49760,
+     "sellLo": 49720,
+     "sellHi": 50484,
+     "global": 49469.95
+    },
+    {
+     "date": "2026-11-07",
+     "buyLo": 49320,
+     "buyHi": 49508,
+     "sellLo": 49720,
+     "sellHi": 50228,
+     "global": 49397.51
+    },
+    {
+     "date": "2026-11-08",
+     "buyLo": 49400,
+     "buyHi": 49508,
+     "sellLo": 49800,
+     "sellHi": 50228,
+     "global": 49398.61
+    },
+    {
+     "date": "2026-11-09",
+     "buyLo": 49600,
+     "buyHi": 49752,
+     "sellLo": 50000,
+     "sellHi": 50473,
+     "global": 49921.65
+    },
+    {
+     "date": "2026-11-10",
+     "buyLo": 48800,
+     "buyHi": 49020,
+     "sellLo": 49200,
+     "sellHi": 49743,
+     "global": 49023.16
+    },
+    {
+     "date": "2026-11-11",
+     "buyLo": 48480,
+     "buyHi": 48512,
+     "sellLo": 48880,
+     "sellHi": 49231,
+     "global": 47895.83
+    },
+    {
+     "date": "2026-11-12",
+     "buyLo": 47413,
+     "buyHi": 47480,
+     "sellLo": 47880,
+     "sellHi": 48136,
+     "global": 46806.56
+    },
+    {
+     "date": "2026-11-13",
+     "buyLo": 47240,
+     "buyHi": 47403,
+     "sellLo": 47640,
+     "sellHi": 48122,
+     "global": 46728.39
+    },
+    {
+     "date": "2026-11-14",
+     "buyLo": 47388,
+     "buyHi": 47440,
+     "sellLo": 47720,
+     "sellHi": 48108,
+     "global": 46753.39
+    },
+    {
+     "date": "2026-11-15",
+     "buyLo": 47388,
+     "buyHi": 47440,
+     "sellLo": 47720,
+     "sellHi": 48108,
+     "global": 46755.34
+    },
+    {
+     "date": "2026-11-16",
+     "buyLo": 46960,
+     "buyHi": 47277,
+     "sellLo": 47280,
+     "sellHi": 47919,
+     "global": 46653.91
+    },
+    {
+     "date": "2026-11-17",
+     "buyLo": 46920,
+     "buyHi": 47063,
+     "sellLo": 47320,
+     "sellHi": 47782,
+     "global": 46606.36
+    },
+    {
+     "date": "2026-11-18",
+     "buyLo": 45865,
+     "buyHi": 45880,
+     "sellLo": 46280,
+     "sellHi": 46585,
+     "global": 45274.38
+    },
+    {
+     "date": "2026-11-19",
+     "buyLo": 45160,
+     "buyHi": 45255,
+     "sellLo": 45560,
+     "sellHi": 45975,
+     "global": 44558.81
+    },
+    {
+     "date": "2026-11-20",
+     "buyLo": 43520,
+     "buyHi": 43656,
+     "sellLo": 43920,
+     "sellHi": 44453,
+     "global": 42860.52
+    },
+    {
+     "date": "2026-11-21",
+     "buyLo": 43200,
+     "buyHi": 43567,
+     "sellLo": 43600,
+     "sellHi": 44361,
+     "global": 42861.73
+    }
+   ]
+  },
+  "SILVER999-EGP": {
+   "unit": "EGP/g",
+   "series": [
+    {
+     "date": "2026-10-23",
+     "buyLo": 98,
+     "buyHi": 98,
+     "sellLo": 101,
+     "sellHi": 101,
+     "global": 96.07
+    },
+    {
+     "date": "2026-10-24",
+     "buyLo": 98,
+     "buyHi": 98,
+     "sellLo": 101,
+     "sellHi": 101,
+     "global": 95.97
+    },
+    {
+     "date": "2026-10-25",
+     "buyLo": 97,
+     "buyHi": 97,
+     "sellLo": 99.75,
+     "sellHi": 99.75,
+     "global": 95.96
+    },
+    {
+     "date": "2026-10-26",
+     "buyLo": 98,
+     "buyHi": 98,
+     "sellLo": 101,
+     "sellHi": 101,
+     "global": 97.02
+    },
+    {
+     "date": "2026-10-27",
+     "buyLo": 98,
+     "buyHi": 98,
+     "sellLo": 101,
+     "sellHi": 101,
+     "global": 98.34
+    },
+    {
+     "date": "2026-10-28",
+     "buyLo": 98,
+     "buyHi": 98,
+     "sellLo": 101,
+     "sellHi": 101,
+     "global": 96.92
+    },
+    {
+     "date": "2026-10-29",
+     "buyLo": 97,
+     "buyHi": 97,
+     "sellLo": 99.75,
+     "sellHi": 99.75,
+     "global": 94.02
+    },
+    {
+     "date": "2026-10-30",
+     "buyLo": 93.75,
+     "buyHi": 93.75,
+     "sellLo": 97,
+     "sellHi": 97,
+     "global": 88.4
+    },
+    {
+     "date": "2026-10-31",
+     "buyLo": 93,
+     "buyHi": 93,
+     "sellLo": 96,
+     "sellHi": 96,
+     "global": 88.63
+    },
+    {
+     "date": "2026-11-01",
+     "buyLo": 93,
+     "buyHi": 93,
+     "sellLo": 96,
+     "sellHi": 96,
+     "global": 88.64
+    },
+    {
+     "date": "2026-11-02",
+     "buyLo": 90.75,
+     "buyHi": 90.75,
+     "sellLo": 96,
+     "sellHi": 96,
+     "global": 91.27
+    },
+    {
+     "date": "2026-11-03",
+     "buyLo": 90.75,
+     "buyHi": 90.75,
+     "sellLo": 96,
+     "sellHi": 96,
+     "global": 88.69
+    },
+    {
+     "date": "2026-11-04",
+     "buyLo": 92,
+     "buyHi": 92,
+     "sellLo": 96,
+     "sellHi": 96,
+     "global": 93.08
+    },
+    {
+     "date": "2026-11-05",
+     "buyLo": 92,
+     "buyHi": 92,
+     "sellLo": 96,
+     "sellHi": 96,
+     "global": 92.47
+    },
+    {
+     "date": "2026-11-06",
+     "buyLo": 90.75,
+     "buyHi": 90.75,
+     "sellLo": 93.75,
+     "sellHi": 93.75,
+     "global": 90.59
+    },
+    {
+     "date": "2026-11-07",
+     "buyLo": 90.75,
+     "buyHi": 90.75,
+     "sellLo": 93.75,
+     "sellHi": 93.75,
+     "global": 90.15
+    },
+    {
+     "date": "2026-11-08",
+     "buyLo": 90.75,
+     "buyHi": 90.75,
+     "sellLo": 93.75,
+     "sellHi": 93.75,
+     "global": 90.15
+    },
+    {
+     "date": "2026-11-09",
+     "buyLo": 90.75,
+     "buyHi": 90.75,
+     "sellLo": 93.75,
+     "sellHi": 93.75,
+     "global": 91.82
+    },
+    {
+     "date": "2026-11-10",
+     "buyLo": 89.75,
+     "buyHi": 89.75,
+     "sellLo": 93,
+     "sellHi": 93,
+     "global": 89.31
+    },
+    {
+     "date": "2026-11-11",
+     "buyLo": 89.75,
+     "buyHi": 89.75,
+     "sellLo": 93,
+     "sellHi": 93,
+     "global": 89.12
+    },
+    {
+     "date": "2026-11-12",
+     "buyLo": 88,
+     "buyHi": 88,
+     "sellLo": 90.75,
+     "sellHi": 90.75,
+     "global": 86.52
+    },
+    {
+     "date": "2026-11-13",
+     "buyLo": 88,
+     "buyHi": 88,
+     "sellLo": 90.75,
+     "sellHi": 90.75,
+     "global": 84.14
+    },
+    {
+     "date": "2026-11-14",
+     "buyLo": 88,
+     "buyHi": 88,
+     "sellLo": 90.75,
+     "sellHi": 90.75,
+     "global": 83.5
+    },
+    {
+     "date": "2026-11-15",
+     "buyLo": 88,
+     "buyHi": 88,
+     "sellLo": 90.75,
+     "sellHi": 90.75,
+     "global": 83.5
+    },
+    {
+     "date": "2026-11-16",
+     "buyLo": 85.75,
+     "buyHi": 85.75,
+     "sellLo": 88.75,
+     "sellHi": 88.75,
+     "global": 80.95
+    },
+    {
+     "date": "2026-11-17",
+     "buyLo": 83,
+     "buyHi": 83,
+     "sellLo": 85.75,
+     "sellHi": 85.75,
+     "global": 81.63
+    },
+    {
+     "date": "2026-11-18",
+     "buyLo": 80.75,
+     "buyHi": 80.75,
+     "sellLo": 83.75,
+     "sellHi": 83.75,
+     "global": 77.95
+    },
+    {
+     "date": "2026-11-19",
+     "buyLo": 79.75,
+     "buyHi": 79.75,
+     "sellLo": 83,
+     "sellHi": 83,
+     "global": 76.65
+    },
+    {
+     "date": "2026-11-20",
+     "buyLo": 72,
+     "buyHi": 72,
+     "sellLo": 74.75,
+     "sellHi": 74.75,
+     "global": 71.47
+    },
+    {
+     "date": "2026-11-21",
+     "buyLo": 72,
+     "buyHi": 72,
+     "sellLo": 74.75,
+     "sellHi": 74.75,
+     "global": 71
+    }
+   ]
+  }
+ }
+}

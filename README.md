@@ -7,6 +7,8 @@ An open-source Flutter app that tracks live gold, silver and USD prices and show
 > **الحالة:** المشروع في بدايته، والكود لسه بيتكتب.
 > **Status:** early stage, code is on the way.
 
+الخطة الكاملة والمعمارية وكل القرارات في [docs/PLAN.md](docs/PLAN.md).
+
 ## الفكرة
 
 المستخدم يسجل اللي عنده (جرامات دهب، فضة، دولارات)، والتطبيق يجيب الأسعار من الإنترنت ويحسب:
@@ -18,10 +20,11 @@ An open-source Flutter app that tracks live gold, silver and USD prices and show
 
 **الأساسية**
 
-- [ ] شاشة الأسعار الحالية: دهب 24 / 21 / 18، فضة، دولار
+- [ ] شاشة الأسعار: دهب 24 / 21 / 18، فضة، دولار، بتتحدث لوحدها
 - [ ] محفظتي: إجمالي القيمة والمكسب أو الخسارة
 - [ ] إضافة وتعديل ومسح عمليات الشراء
 - [ ] العمل بدون إنترنت بآخر أسعار متخزنة
+- [ ] مساعد ذكي: ملخص للسوق وشات يشرح الأرقام
 
 **الإضافية**
 
@@ -30,17 +33,22 @@ An open-source Flutter app that tracks live gold, silver and USD prices and show
 - [ ] حاسبة سريعة (جرامات ← سعر)
 - [ ] Dark mode وعربي / إنجليزي
 
-## الـ APIs
+## المعمارية
 
-كلها مجانية ومن غير API key:
+التطبيق بيكلم سيرفر بتاعنا بس، والسيرفر هو اللي بيكلم المصادر الخارجية. كده المفاتيح ما بتطلعش بره السيرفر، والأسعار بتوصل للتطبيق لوحدها على WebSocket أول ما تتغير.
 
-| API | بيرجع إيه |
+```
+تطبيق Flutter  ⇄  Backend  →  gold-api.com / Daleelak / Claude API
+```
+
+## مصادر البيانات
+
+| المصدر | بيرجع إيه |
 |---|---|
-| `https://api.gold-api.com/price/XAU` | سعر أونصة الدهب بالدولار |
-| `https://api.gold-api.com/price/XAG` | سعر أونصة الفضة بالدولار |
-| `https://open.er-api.com/v6/latest/USD` | سعر الدولار مقابل الجنيه |
-
-الحسبة:
+| `api.gold-api.com` | السعر العالمي للدهب والفضة بالدولار، لحظي |
+| `getdaleelak.com/api/v1/feed.json` | سعر السوق المصري بالجنيه وتاريخ 30 يوم |
+| `open.er-api.com` | سعر الدولار الرسمي (احتياطي) |
+| Claude API | المساعد الذكي (المفتاح على السيرفر بس) |
 
 ```
 جرام عيار 24 بالجنيه = (سعر الأونصة ÷ 31.1035) × سعر الدولار
@@ -48,25 +56,16 @@ An open-source Flutter app that tracks live gold, silver and USD prices and show
 عيار 18 = عيار 24 × 0.75
 ```
 
-**ملحوظة:** السعر عالمي استرشادي. سعر الصاغة في مصر بيختلف عنه (فرق سوق ومصنعية)، والتطبيق مش نصيحة استثمارية.
+**ملحوظة:** الأسعار استرشادية، وسعر الصاغة في مصر بيختلف عن العالمي. التطبيق مش نصيحة استثمارية.
 
 ## التقنيات
 
 - Flutter و Dart
-- `dio` للـ API
+- `dio` و `web_socket_channel` للاتصال بالسيرفر
 - `hive` للتخزين المحلي
 - `flutter_bloc` (Cubit) للـ state management
 - `fl_chart` للرسم البياني
 - `flutter_local_notifications` للتنبيهات
-
-هيكل الكود:
-
-```
-lib/
-  data/    الـ API والتخزين المحلي
-  logic/   الـ Cubits والحسابات
-  ui/      الشاشات والـ widgets
-```
 
 ## المساهمة
 
